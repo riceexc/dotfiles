@@ -1,0 +1,6 @@
+* {{
+    bg-color:       {background}cc;
+    border-color:   {color4};
+    text-color:     {foreground};
+    accent-color:   {color5};
+}}

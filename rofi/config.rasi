@@ -1,0 +1,76 @@
+configuration {
+    modi:               "run,drun";
+    font:               "CozetteVector 19";
+    drun-display-format: "{name}";
+    show-icons:         true;
+}
+
+/* Force Rofi to inherit a clean, empty canvas base */
+@theme "/dev/null"
+@import "~/.cache/wal/colors-rofi-hook.rasi"
+
+/* --- ALL THEME STYLING MUST GO HERE --- */
+* {
+/*    bg-color:       #151517cc;  
+    border-color:   #78a9ff;  
+    text-color:     #ffffff;  
+    accent-color:   #ee5396; */ 
+    background-color: transparent;
+}
+
+window {
+    background-color: @bg-color;
+    border:           2px;
+    border-color:     @border-color;
+    padding:          0px;
+    width:            35%;
+    height:	      42%;    
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding:  0px;
+}
+
+inputbar {
+    background-color: @bg-color;
+    children:         [ prompt, entry ];
+    padding:          10px;
+}
+
+prompt {
+    enabled:	false;
+    text-color: @text-color;
+    padding:    0px 5px 0px 0px;
+}
+
+entry {
+    text-color:        @text-color;
+    placeholder:       "Run...";
+}
+
+listview {
+    fixed-height: 0;
+    lines:        12;         
+    scrollbar:    false;
+    padding:      0px;
+}
+
+element {
+    padding: 6px 16px;
+    spacing: 12px;
+}
+
+element normal text, element alternate text, element-text {
+    text-color:       @text-color;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @accent-color; 
+}
+
+element selected text, element selected element-text {
+    text-color:       @bg-color;           
+    background-color: transparent;
+}

@@ -1,0 +1,12 @@
+*.env
+*.secret
+*credentials*
+private*
+
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+rofi/history
+rofi/*.cache
+rofi/.cache

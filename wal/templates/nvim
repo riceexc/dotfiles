@@ -1,0 +1,3 @@
+[templates.nvim]
+input_path = '~/.config/nvim/lua/custom/pywal/matugen.lua'  -- или waltemplate, в зависимости от версии
+output_path = '~/.cache/wal/base46-dark.lua'
